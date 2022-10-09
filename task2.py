@@ -10,19 +10,21 @@ def fill_list(n):
         lst.append(i)
     return lst
 
-def unique_list(lst):
+
+def uniq_list(lst):
     lst1 = []
     for i in lst:
-        if i in lst1:
-            continue
-        else:
+        if i not in lst1:
             lst1.append(i)
     return lst1
-
 
 
 N = int(input("Введите число N: "))
 lst = fill_list(N)
 print(lst)
-lst1 = unique_list(lst)
+lst1 = uniq_list(lst)
+print("Через цикл:")
+print(lst1)
+print("Через функцию:")
+lst1 = set(lst)
 print(lst1)
